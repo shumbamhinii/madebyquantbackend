@@ -5037,7 +5037,7 @@ string, disclaimerText: string | null = null) => {
           companyName,
           'TRIAL BALANCE',
           `AS OF ${new Date(trialBalanceEndDate).toLocaleDateString('en-GB')}`,
-          
+          'Disclaimer: This trial balance is based on the provided bank statement and assumptions about transaction categorization that are LLM based utilising relevant accounting libraries.'
         );
 
         // Table Headers
@@ -5088,7 +5088,6 @@ string, disclaimerText: string | null = null) => {
 
         break;
       }
-
       case 'cash-flow-statement': {
         type TransactionRow = {
           type: string;
